@@ -1,0 +1,539 @@
+html {
+  scroll-behavior: smooth !important;
+  overflow-x: hidden;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbar .navbarLogo {
+  -webkit-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(193deg) brightness(107%) contrast(101%);
+          filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(193deg) brightness(107%) contrast(101%);
+}
+
+.navbar a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6) !important;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.navbar a:hover {
+  color: white !important;
+}
+
+.navbar p {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.navbar i {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 575px) {
+  .navbar a {
+    font-size: 0.9rem;
+    color: white;
+  }
+  .navbar i {
+    font-size: 1rem;
+  }
+}
+
+.navbar-toggler {
+  position: absolute;
+  right: 1em;
+  top: 2em;
+  outline: none;
+  border: none;
+}
+
+.navbar-toggler:focus, .navbar-toggler:active {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.navbar-toggler .toggler-icon {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  display: block;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.navbar-toggler .mid-bar {
+  margin: 5px auto;
+}
+
+.navbar-toggler.collapsed .top-bar {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.navbar-toggler.collapsed .mid-bar {
+  filter: alpha(opacity=1);
+  opacity: 1;
+}
+
+.navbar-toggler.collapsed .low-bar {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.navbar-toggler .top-bar {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: 10% 10%;
+          transform-origin: 10% 10%;
+}
+
+.navbar-toggler .mid-bar {
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+
+.navbar-toggler .low-bar {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transform-origin: 10% 10%;
+          transform-origin: 10% 10%;
+}
+
+.citat {
+  width: 15em;
+  position: absolute;
+  left: 50%;
+  bottom: 15%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-style: italic;
+}
+
+footer {
+  color: white;
+}
+
+footer a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+footer a:hover {
+  color: white;
+}
+
+footer .bg-black {
+  background-color: #181b1e;
+  font-size: 0.8rem;
+}
+
+footer h2 {
+  font-size: 1rem;
+}
+
+iframe {
+  -webkit-box-shadow: 0 0 1em rgba(255, 255, 255, 0.2);
+          box-shadow: 0 0 1em rgba(255, 255, 255, 0.2);
+  border-radius: 0.2em;
+}
+
+iframe::after {
+  content: '';
+  -webkit-box-shadow: 0 0 1em rgba(255, 255, 255, 0.8);
+          box-shadow: 0 0 1em rgba(255, 255, 255, 0.8);
+}
+
+iframe:hover {
+  -webkit-box-shadow: 0 0 1em rgba(255, 255, 255, 0.8);
+          box-shadow: 0 0 1em rgba(255, 255, 255, 0.8);
+}
+
+.fullContainer {
+  background-color: #181b1e;
+  background-image: url("../images/backgroundImage.jpg");
+  background-image: url("../images/backgroundImage.webp");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  position: relative;
+  color: white;
+  text-align: center;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.image-1, .image-2 {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  height: 50em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.image-1::before, .image-2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-filter: grayscale(50%);
+          filter: grayscale(50%);
+}
+
+.image-1 .rel, .image-2 .rel {
+  position: relative;
+}
+
+.image-1 {
+  background-image: url("../images/restaurang.jpg");
+  background-image: url("../images/restaurang.webp");
+}
+
+.image-2 {
+  background-image: url("../images/bar.jpg");
+  background-image: url("../images/bar.webp");
+}
+
+.opening {
+  position: relative;
+  /*h2,
+    h3 {
+        font-size: clamp(0.8rem, 3vw, 1.2rem);
+        opacity: 0;
+        animation: fadeIn 4s 4s ease-in-out forwards;
+    }*/
+}
+
+.opening .weekdays {
+  color: white;
+}
+
+.opening h2 {
+  position: absolute;
+  z-index: 1;
+  margin: 3em 0 0 0;
+  color: white;
+}
+
+.heroText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+@media (max-width: 575px) {
+  .heroText {
+    font-size: 0.8rem;
+  }
+}
+
+.heroText h1 {
+  font-size: clamp(1.2rem, 4vw, 4rem);
+}
+
+.heroText p {
+  font-size: clamp(0.8rem, 3vw, 1.5rem);
+}
+
+.menuContainer {
+  position: relative;
+  margin: 10em 0;
+}
+
+.menuContainer .caroBtns {
+  position: relative;
+  max-width: 90vw;
+  text-align: center;
+  justify-items: center;
+  margin: auto;
+}
+
+.menuContainer .caroBtns button {
+  position: relative;
+  padding: 0.5em 1em;
+  font-size: 0.9em;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.8);
+  outline: inherit;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.menuContainer .caroBtns button:hover {
+  color: white;
+}
+
+.menuContainer .caroBtns button:focus-visible {
+  border: 1px solid white;
+}
+
+.menuContainer .menuHeader {
+  text-align: center;
+  margin-top: 2em;
+  color: white;
+}
+
+.menuContainer .menuHeader .menuHeaderLinks a {
+  margin: 0em 1em;
+  font-size: 0.5em;
+  text-decoration: none;
+  color: white;
+}
+
+.menuContainer .menuBody {
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.menuContainer .menuBody .menuPaper {
+  text-align: center;
+  width: 50em;
+  background-color: seashell;
+  margin: 1em 1em;
+}
+
+.menuContainer .menuBody .menuPaper .menuText {
+  padding: 2em;
+  font-size: 1rem;
+  font-weight: 100;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 575px) {
+  .menuContainer .menuBody .menuPaper .menuText {
+    font-size: 0.72rem;
+  }
+}
+
+.menuContainer .menuBody .menuPaper .menuText h2 {
+  text-transform: uppercase;
+  font-family: 'Economica', sans-serif;
+}
+
+.menuContainer .menuBody .menuPaper .menuText h6 {
+  text-transform: uppercase;
+  font-family: 'Economica', sans-serif;
+  font-weight: 300;
+  margin-top: 1em;
+}
+
+.menuContainer .menuBody .menuPaper .menuText p {
+  font-weight: 100;
+}
+
+@media (max-width: 575px) {
+  .menuContainer .menuBody .menuPaper .menuText p {
+    font-weight: 300;
+  }
+}
+
+.menuContainer .menuBody .menuPaper .menuText a {
+  color: black;
+  text-decoration: none;
+}
+
+.tableBookingContainer {
+  position: relative;
+  text-align: center;
+}
+
+.tableBookingContainer .bookingTextContainer {
+  color: white;
+  margin-top: 5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tableBookingContainer .card {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.tableBookingContainer .modal-content {
+  background-color: white;
+  color: black;
+}
+
+.tableBookingContainer .modal-content button {
+  color: black;
+}
+
+.tableBookingContainer .modal-content #modalBody i {
+  font-size: 5em;
+  color: green;
+}
+
+.tableBookingContainer #cart {
+  height: 60vh;
+  overflow: auto;
+  text-align: start;
+}
+
+.tableBookingContainer #cart input {
+  width: 5em;
+}
+
+@media (max-width: 575px) {
+  .tableBookingContainer #cart input {
+    font-size: 2.7vw;
+  }
+}
+
+.tableBookingContainer .cartItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border-radius: 4px;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+
+@media (max-width: 575px) {
+  .tableBookingContainer .cartItem {
+    font-size: 2.7vw;
+  }
+}
+
+.tableBookingContainer .cartItem .itemButton {
+  height: 3em;
+}
+
+.tableBookingContainer button {
+  outline: none;
+  border: 1px solid white;
+  border-radius: 4px;
+  background: transparent;
+  color: white;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.tableBookingContainer button:hover {
+  background-color: white;
+  color: black;
+}
+
+.tableBookingContainer button:focus-visible {
+  border: 1px solid white;
+}
+
+.tableBookingContainer .addToCartButton {
+  padding: 4px 8px;
+  border: 1px solid white;
+  border-radius: 4px;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.tableBookingContainer .addToCartButton:hover {
+  background-color: white;
+  color: black;
+  padding: 4px 8px;
+  border: 1px solid white;
+  border-radius: 4px;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+
+@-webkit-keyframes slideDown {
+  0% {
+    top: -150px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    top: -150px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

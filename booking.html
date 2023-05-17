@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="Vi finns på Stora Brogatan 7 i Norrtälje. Vi finns på Reservera ett bord via telefon eller med ett formulär här på sidan. Vi är redo att ge dig och ditt sällskap den bästa möjliga resturangupplevelsen.">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.svg">
+    <link rel="apple-touch-icon" href="images/apple-icon.png">
+    <title>På Grillen Steakhouse - Boka bord inför ditt resturangbesök.</title>
+</head>
+
+<body>
+
+    <div class="fullContainer">
+        <!-- Navbar -->
+        <nav class="container-fluid navbar navbar-expand-md navbar-dark">
+            <a href="index.html">
+                <picture>
+                    <source srcset="images/pagrillenlogo.webp" type="image/webp">
+                    <source srcset="images/pagrillenlogo.png" type="image/jpeg">
+                    <img src="images/pagrillenlogo.png" width="80" height="101" class="navbarLogo m-2"
+                        alt="En bild på loggan">
+                </picture>
+            </a>
+            <div class="collapse navbar-collapse justify-content-end gap-5" id="navbarSupportedContent">
+                <div class="navbar-text">
+                    <a href="index.html" class="m-2">Hem</a>
+                    <a href="menu.html" class="m-2">Meny</a>
+                    <a href="booking.html" class="m-2">Boka bord</a>
+                </div>
+                <div class="navbar-text">
+                    <a href="https://facebook.com/P%C3%A5-Grillen-104883008031152" target="_blank" class="m-2"><span
+                            style="position: absolute; clip: rect(0 0 0 0);">Facebook</span><i
+                            class="bi bi-facebook"></i></a>
+                    <a href="https://instagram.com/pagrillen/" target="_blank" class="m-2"><span
+                            style="position: absolute; clip: rect(0 0 0 0);">Instagram</span><i
+                            class="bi bi-instagram"></i></a>
+                    <a href="tel:0176-10733" class="m-2"><span
+                            style="position: absolute; clip: rect(0 0 0 0);">Telefonnummer</span><i
+                            class="bi bi-telephone"></i></a>
+                    <a href="mailto:info@pagrillen.se" class="m-2"><span
+                            style="position: absolute; clip: rect(0 0 0 0);">E-post</span><i
+                            class="bi bi-envelope"></i></a>
+                </div>
+            </div>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="toggler-icon top-bar"></span>
+                <span class="toggler-icon mid-bar"></span>
+                <span class="toggler-icon low-bar"></span>
+            </button>
+        </nav>
+
+        <div class="tableBookingContainer" id="tableBookingContainer">
+            <div class="container bookingTextContainer">
+                <h1>Vill ni boka ett bord?</h1>
+                <p>Boka ett bord genom att ringa 0176-107 33 eller använd formuläret nedan.</p>
+            </div>
+            <div id="bookingCarousel" class="carousel slide" data-bs-touch="true" data-bs-interval="false">
+
+                <form onsubmit="submitForm(event);">
+
+                    <div class="container carousel-inner mt-2">
+                        <div class="carousel-item active">
+                            <div class="d-flex flex-column flex-lg-row mx-5 mx-lg-2 justify-content-center">
+                                <div class="w-75 mx-auto mx-lg-3 mt-1 mt-lg-3">
+                                    <label for="name" class="form-label">Namn</label>
+                                    <input type="text" class="form-control text-center" name="Namn" id="name" required>
+                                </div>
+                                <div class="w-75 mx-auto mx-lg-3 mt-3">
+                                    <label for="email" class="form-label">E-post</label>
+                                    <input type="email" class="form-control text-center" name="Email" id="email"
+                                        placeholder="namn@mail.com" required>
+                                </div>
+                                <div class="w-75 mx-auto mx-lg-3 mt-3">
+                                    
+                                    <label for="date" class="form-label">Datum</label>
+                                    <input type="date" class="form-control text-center"
+                                        id="date" name="Datum"
+                                        oninput="setAvailableTimes()">
+
+                                </div>
+                                <div class="w-75 mx-auto mx-lg-3 mt-3">
+                                    <label for="time" class="form-label">Ankomst</label>
+                                    <select id="time" class="form-select text-center" name="Ankomst">
+                                    </select>
+                                </div>
+                                <div class="w-75 mx-auto mx-lg-3 mt-3">
+                                    <label for="guests" class="form-label">Gäster</label>
+                                    <select id="guests" class="form-select text-center" name="Gäster"
+                                        onchange="addMailInputs(); location.href='#mailContainer'">
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- Här öppnas en container där användaren kan skriva in sina vänners mailadresser så de kan få en bekräftelse om bokningen -->
+                            <div class="mailFriends container mt-5">
+                                <button class="p-2 btn" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#mailContainer" aria-expanded="false" aria-controls="mailContainer"
+                                    onclick="addMailInputs(); location.href='#mailContainer'">
+                                    Påminn de andra i ditt sällskap
+                                </button>
+                                <div class="collapse rounded-3 mx-auto" id="mailContainer">
+                                    <div class="container card card-body w-75 mt-5">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Button trigger modal -->
+                            <button id="modalButton" type="submit" class="btn my-4" id="submitButton">
+                                Boka
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="staticBackdropLabel">Bokningsbekräftelse</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"><i class="bi bi-x-circle-fill"></i></button>
+                                        </div>
+                                        <div class="modal-body" id="modalBody">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn" data-bs-dismiss="modal" id="dismissButton">Ångra</button>
+                                            <button type="button" class="btn" id="successButton"
+                                                onclick="successfulBooking()">Godkänn</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container-fluid mt-auto py-5 bg-dark d-flex justify-content-evenly">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-4 col-lg-4 mt-5">
+                        <h2><i class="bi bi-link"></i> Länkar</h2>
+                        <div class="list-group">
+                            <a href="index.html">Hem</a>
+                            <a href="menu.html" class="mt-3">Meny</a>
+                            <a href="booking.html" class="mt-3">Boka bord</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-4 mt-5">
+                        <h2><i class="bi bi-telephone"></i> Kontakt</h2>
+                        <a href="tel:0176-10733">0176-107 33</a><br>
+                        <a href="mailto:info@pagrillen.se">info@pagrillen.se</a>
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-4 mt-5">
+                        <h2><i class="bi bi-geo-alt"></i> Adress</h2>
+                        <p>Stora Brogatan 7A <br> 761 30 Norrtälje</p>
+                        <a target="_blank"
+                            href="https://www.google.com/maps/place/P%C3%A5+Grillen+Steakhouse/@59.7590854,18.7027663,17.55z/data=!4m5!3m4!1s0x465ff64d2878e8c7:0x170be4f43564266f!8m2!3d59.7590118!4d18.7030487">
+                            <span style="position: absolute; clip: rect(0 0 0 0);">Karta över
+                                restaurangen</span><img src="images/map.jpg" width="250" height="150"
+                                alt="Karta över restaurangen" loading="lazy">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg-black text-end p-3 px-5">
+            <p>Copyright &#169; PåGrillen 2021</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <!-- <script src="mealArrays.js"></script> -->
+    <script src="js/booking.js"></script>
+</body>
+
+</html>

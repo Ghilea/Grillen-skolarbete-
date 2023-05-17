@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Crawl-delay: 5
+
+# Se alltid till så att CSS och Javascript inte blockeras:
+Allow: /*.css$
+Allow: /*.js$
+
+#sitemap
+#Sitemap: http://grillen.denniskarlssondesign.com/sitemap.xml

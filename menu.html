@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="Vi finns på Stora Brogatan 7 i Norrtälje. Förrätter Varmrätter Från Grillen Desserter Vegetariskt">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.svg">
+    <link rel="apple-touch-icon" href="images/apple-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Economica&display=swap" rel="stylesheet">
+    <title>På Grillen Steakhouse - Meny</title>
+</head>
+
+<body>
+
+    <div class="fullContainer">
+
+        <!-- Navbar -->
+        <nav class="container-fluid navbar navbar-expand-md navbar-dark">
+            <a href="index.html">
+                <picture>
+                    <source srcset="images/pagrillenlogo.webp" type="image/webp">
+                    <source srcset="images/pagrillenlogo.png" type="image/jpeg">
+                    <img src="images/pagrillenlogo.png" width="80" height="101" class="navbarLogo m-2"
+                        alt="En bild på loggan">
+                </picture>
+            </a>
+            <div class="collapse navbar-collapse justify-content-end gap-5" id="navbarSupportedContent">
+                <div class="navbar-text">
+                    <a href="index.html" class="m-2">Hem</a>
+                    <a href="menu.html" class="m-2">Meny</a>
+                    <a href="booking.html" class="m-2">Boka bord</a>
+                </div>
+                <div class="navbar-text">
+                    <a href="https://facebook.com/P%C3%A5-Grillen-104883008031152" target="_blank" class="m-2"><span
+                            style="position: absolute; clip: rect(0 0 0 0);">Facebook</span><i
+                            class="bi bi-facebook"></i></a>
+                    <a href="https://instagram.com/pagrillen/" target="_blank" class="m-2"><span
+                            style="position: absolute; clip: rect(0 0 0 0);">Instagram</span><i
+                            class="bi bi-instagram"></i></a>
+                    <a href="tel:0176-10733" class="m-2"><span
+                            style="position: absolute; clip: rect(0 0 0 0);">Telefonnummer</span><i
+                            class="bi bi-telephone"></i></a>
+                    <a href="mailto:info@pagrillen.se" class="m-2"><span
+                            style="position: absolute; clip: rect(0 0 0 0);">E-post</span><i
+                            class="bi bi-envelope"></i></a>
+                </div>
+            </div>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="toggler-icon top-bar"></span>
+                <span class="toggler-icon mid-bar"></span>
+                <span class="toggler-icon low-bar"></span>
+            </button>
+        </nav>
+
+        <div class="menuContainer" id="menuContainer">
+            <div id="menuCarousel" class="carousel slide carousel-fade" data-bs-touch="true" data-bs-interval="false">
+                <div class="caroBtns">
+                    <button onclick="location.href='#top'" type="button" data-bs-target="#menuCarousel"
+                        data-bs-slide-to="0" id="starterLink">Förrätter</button>
+                    <button onclick="location.href='#top'" type="button" data-bs-target="#menuCarousel"
+                        data-bs-slide-to="1" id="mainsLink">Varmrätter</button>
+                    <button onclick="location.href='#top'" type="button" data-bs-target="#menuCarousel"
+                        data-bs-slide-to="2" id="bbqLink">Från Grillen</button>
+                    <button onclick="location.href='#top'" type="button" data-bs-target="#menuCarousel"
+                        data-bs-slide-to="3" id="sidesLink">Tillbehör</button>
+                    <button onclick="location.href='#top'" type="button" data-bs-target="#menuCarousel"
+                        data-bs-slide-to="4" id="dessertLink">Desserter</button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="menuBody">
+                            <div class="menuPaper">
+                                <div class="menuText" id="starterMenu">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="menuBody">
+                            <div class="menuPaper">
+                                <div class="menuText" id="mainMenu">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="menuBody">
+                            <div class="menuPaper">
+                                <div class="menuText" id="bbqMenu">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="menuBody">
+                            <div class="menuPaper">
+                                <div class="menuText" id="sidesMenu">
+                                    <h2>TILLBEHÖR</h2>
+                                    <hr>
+                                    <h6>POTATIS & ROTFRUKT</h6>
+                                    <p>
+                                        Potatisgratäng <strong>40:-</strong><br>
+                                        Pommes frites <strong>25:-</strong><br>
+                                        Sötpotatis pommes frites <strong>35:-</strong><br>
+                                        Smashed potato gratinerad med parmesan, cheddar & mozzarella
+                                        <strong>40:-</strong><br>
+                                        Cheddar & mozzarellagratinerade pommes frites <strong>40:-</strong><br>
+                                        Rostade rotfrukter med chevréost & vitlöksyoghurt <strong>55:-</strong><br>
+                                        Stuffed potatoskin fylld med potatispuré smaksatt med bacon & persilja
+                                        gratinerad med mozzarella <strong>40:-</strong></p>
+                                    <hr>
+                                    <div class="doubleCol" style="display: flex; justify-content:space-evenly;">
+                                        <div style="width: 40%;">
+                                            <h6>MER GOTT</h6>
+                                            <p>
+                                                Coleslaw <strong>35:-</strong><br>
+                                                Grillad majs <strong>20:-</strong><br>
+                                                Creamy corn <strong>30:-</strong><br>
+                                                Chimi churri <strong>25:-</strong><br>
+                                                Stekta padrones med flingsalt <strong>35:-</strong><br>
+                                                Baconlindad sparris <strong>30:-</strong><br>
+                                                Smörfrästa edamamebönor med vitlök,<br> flingsalt & grana padano
+                                                <strong>35:-</strong></p>
+                                        </div>
+                                        <hr style="width: 1px; height: 200px; display: inline-block;">
+                                        <div style="width: 40%;">
+                                            <h6>DIPSÅSER</h6>
+                                            <p>
+                                                Aioli <strong>15:-</strong><br>
+                                                Srirachamajonnäs <strong>15:-</strong><br>
+                                                Raita <strong>20:-</strong><br>
+                                                Hot salsa <strong>15:-</strong><br>
+                                                Srirachaketchup <strong>15:-</strong><br>
+                                                Guacamole <strong>25:-</strong><br>
+                                                Ostsås <strong>25:-</strong><br>
+                                                BBQ sås <strong>20:-</strong><br></p>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="doubleCol" style="display: flex; justify-content:space-evenly;">
+                                        <div style="width: 40%;">
+                                            <h6>SMÖR 20:-</h6>
+                                            <p>
+                                                Vitlökssmör<br>
+                                                Persiljesmör<br>
+                                                Café de Parissmör<br>
+                                                Rödlökssmör<br>
+                                                Soltorkad tomat & parmesansmör<br>
+                                            </p>
+                                        </div>
+                                        <hr style="width: 1px; height: 150px; display: inline-block;">
+                                        <div style="width: 40%;">
+                                            <h6>SÅSER 20:-</h6>
+                                            <p>
+                                                Rödvinssås<br>
+                                                Rosmarinsås<br>
+                                                Bearnaisesås<br>
+                                                Choronsås<br>
+                                                Grönpepparsås<br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="menuBody">
+                            <div class="menuPaper">
+                                <div class="menuText" id="dessertMenu">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="caroBtns mb-4">
+                <button onclick="location.href='#top'" type="button" data-bs-target="#menuCarousel"
+                    data-bs-slide-to="0">Förrätter</button>
+                <button onclick="location.href='#top'" type="button" data-bs-target="#menuCarousel"
+                    data-bs-slide-to="1">Varmrätter</button>
+                <button onclick="location.href='#top'" type="button" data-bs-target="#menuCarousel"
+                    data-bs-slide-to="2">Från Grillen</button>
+                <button onclick="location.href='#top'" type="button" data-bs-target="#menuCarousel"
+                    data-bs-slide-to="3">Tillbehör</button>
+                <button onclick="location.href='#top'" type="button" data-bs-target="#menuCarousel"
+                    data-bs-slide-to="4">Desserter</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container-fluid mt-auto py-5 bg-dark d-flex justify-content-evenly">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-4 col-lg-4 mt-5">
+                        <h2><i class="bi bi-link"></i> Länkar</h2>
+                        <div class="list-group">
+                            <a href="index.html">Hem</a>
+                            <a href="menu.html" class="mt-3">Meny</a>
+                            <a href="booking.html" class="mt-3">Boka bord</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-4 mt-5">
+                        <h2><i class="bi bi-telephone"></i> Kontakt</h2>
+                        <a href="tel:0176-10733">0176-107 33</a><br>
+                        <a href="mailto:info@pagrillen.se">info@pagrillen.se</a>
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-4 mt-5">
+                        <h2><i class="bi bi-geo-alt"></i> Adress</h2>
+                        <p>Stora Brogatan 7A <br> 761 30 Norrtälje</p>
+                        <a target="_blank"
+                            href="https://www.google.com/maps/place/P%C3%A5+Grillen+Steakhouse/@59.7590854,18.7027663,17.55z/data=!4m5!3m4!1s0x465ff64d2878e8c7:0x170be4f43564266f!8m2!3d59.7590118!4d18.7030487">
+                            <span style="position: absolute; clip: rect(0 0 0 0);">Karta över
+                                restaurangen</span><img src="images/map.jpg" width="250" height="150"
+                                alt="Karta över restaurangen" loading="lazy">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg-black text-end p-3 px-5">
+            <p>Copyright &#169; PåGrillen 2021</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <script src="js/mealArrays.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+
+</html>
